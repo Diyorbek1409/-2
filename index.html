@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чистый Дом</title>
+    <link rel="stylesheet" href="stael.css">
+</head>
+<body>
+
+    <div class="reg-overlay" id="regOverlay">
+        <div class="reg-modal" id="regModal">
+            <div id="regFormStep">
+                <h2>Добро пожаловать!</h2>
+                <p class="reg-subtitle">Чтобы продолжить, заполните форму</p>
+
+                <form id="regForm" novalidate>
+                    <div class="reg-field" id="regNameField">
+                        <label for="regName">Имя</label>
+                        <input type="text" id="regName" placeholder="Ваше имя">
+                        <div class="reg-error">Пожалуйста, введите имя</div>
+                    </div>
+
+                    <div class="reg-field" id="regPhoneField">
+                        <label for="regPhone">Номер телефона</label>
+                        <input type="tel" id="regPhone" placeholder="+998 90 123 45 67">
+                        <div class="reg-error">Введите корректный номер телефона</div>
+                    </div>
+
+                    <div class="reg-field" id="regAddressField">
+                        <label for="regAddress">Адрес</label>
+                        <input type="text" id="regAddress" placeholder="Город, улица, дом">
+                        <div class="reg-error">Пожалуйста, введите адрес</div>
+                    </div>
+
+                    <button type="submit" class="reg-submit-btn">Отправить</button>
+                </form>
+            </div>
+
+            <div id="regSuccessStep" style="display:none;">
+                <div class="reg-success">
+                    <div class="reg-success-icon">✓</div>
+                    <h2>Спасибо!</h2>
+                    <p class="reg-subtitle">Ваши данные успешно приняты.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-overlay" id="adminOverlay">
+        <div class="admin-modal" id="adminModal">
+            <div id="adminPassStep">
+                <h2>Админ-панель</h2>
+                <p class="reg-subtitle">Введите пароль администратора</p>
+
+                <div class="reg-field" id="adminPassField">
+                    <label for="adminPassInput">Пароль</label>
+                    <input type="password" id="adminPassInput" placeholder="Пароль" autocomplete="off">
+                    <div class="reg-error">Неверный пароль</div>
+                </div>
+
+                <button type="button" class="reg-submit-btn" id="adminPassSubmit">Войти</button>
+                <button type="button" class="admin-cancel-btn" id="adminPassCancel">Отмена</button>
+            </div>
+
+            <div id="adminOrdersStep" style="display:none;">
+                <h2>Заказы</h2>
+                <div id="adminOrdersList"></div>
+                <button type="button" class="logout-btn admin-close-btn" id="adminCloseBtn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="Navbar1">
+        <div class="logo">
+            <img style="width: 40px; height: 40px; border-radius: 50%; margin-top: 19px; margin-left: 25px;" src="image_2026-08-22_14-57-55.jpg" alt="">
+        </div>
+
+        <div class="navv">
+            <h1>Чистый Дом</h1>
+
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="title" id="navMenu">
+                <div class="poyiskavik">
+                    <ul style="margin-left: 100px;">
+                        <li><a href="#home1">Kafolat</a></li>
+                        <li><a href="#home2">Garnet</a></li>
+                        <li><a href="#home3">Max</a></li>
+                        <li><a href="#home4">Guard</a></li>
+                        <li><a href="#home5">Nalan</a></li>
+                        <li><a href="#home6">Fruktashka</a></li>
+                        <li><a href="#home7">Bio Master</a></li>
+                        <li><a href="#home8">Air Bliss</a></li>
+                        <li><a href="#home9">Lemon Moon</a></li>
+                        <li><a href="#home10">Silk</a></li>
+                        <li><a href="#home12">PegAs</a></li>
+                        <li><a href="#home13">Briler</a></li>
+                        <li><a href="#home14">Brick</a></li>
+                        <li><a href="#home15">Color</a></li>
+                        <li><a href="#home16">Velar</a></li>
+                        <li><a href="#home17">Бумажные салфетки</a></li>
+                        <li><a href="#home18">Стрейч и фалга</a></li>
+                        <li><a href="#home19">Перчатки</a></li>
+                        <li><a href="#home20">Влажный салфетки</a></li>
+                    </ul>
+                </div>
+                <button class="admin-btn admin-trigger nav-admin-btn" id="adminBtnNav">Admin</button>
+                <button class="logout-btn" id="logoutBtn">Выйти из аккаунта</button>
+            </div>
+        </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+
+    <section id="home1">
+                    <i><h1> Kafolat</h1></i>      
+    </section>
+
+    <div class="main-content">
+        <div class="products-container">
+
+            <div class="product">
+                <img src="photo_2026-07-12_16-44-50.jpg" alt="Анти-жир">
+                <h3>Анти-жир Кафолат 500гр</h3>
+                <p>Стоимость: 13 500 сум</p>
+                <button onclick="addToCart('Анти-жир Кафолат 500гр', 13500)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-06-27_08-52-06.jpg" alt="Гель 3кг">
+                <h3>Гель для мытья посуды 3кг</h3>
+                <p>Стоимость: 60 000 сум</p>
+                <button onclick="addToCart('Гель для мытья посуды 3кг', 60000)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="image_2026-08-22_09-23-28.jpg" alt="Кафолат 1кг">
+                <h3>Гель для мытья посуды "Кафолат" 1кг</h3>
+                <p>Стоимость: 20 000 сум</p>
+                <button onclick="addToCart('Гель для мытья посуды Кафолат 1кг', 20000)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-06-27_08-52-06.jpg" alt="Кафолат 700гр">
+                <h3>Гель для мытья посуды "Кафолат" 700гр</h3>
+                <p>Стоимость: 15 000 сум</p>
+                <button onclick="addToCart('Гель для мытья посуды Кафолат 700гр', 15000)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-06-27_20-52-48.jpg" alt="Кафолат 300гр">
+                <h3>Гель для мытья посуды "Кафолат" 300гр</h3>
+                <p>Стоимость: 6 900 сум</p>
+                <button onclick="addToCart('Гель для мытья посуды Кафолат 300гр', 6900)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-06-27_22-05-31.jpg" alt="4.5 литр">
+                <h3>Жидкий гель для мытья посуды 4.5 литр</h3>
+                <p>Стоимость: 23 500 сум</p>
+                <button onclick="addToCart('Жидкий гель для мытья посуды 4.5 литр', 23500)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-06-27_22-11-13.jpg" alt="Чистоль">
+                <h3>Чистоль "Кафолат"</h3>
+                <p>Стоимость: 6 500 сум</p>
+                <button onclick="addToCart('Чистоль Кафолат', 6500)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-06-28_11-55-25.jpg" alt="Освежитель 250">
+                <h3>Освежитель воздуха 250 гр.</h3>
+                <p>Стоимость: 7 200 сум</p>
+                <button onclick="addToCart('Освежитель воздуха 250 гр.', 7200)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-06-28_11-55-25.jpg" alt="Освежитель 400">
+                <h3>Освежитель воздуха 400 гр.</h3>
+                <p>Стоимость: 9 500 сум</p>
+                <button onclick="addToCart('Освежитель воздуха 400 гр.', 9500)">Добавить в корзину</button>
+            </div>
+
+        </div>
+    </div>
+
+    <section id="home2">
+        <i><h1>Garnet</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-06-28_14-18-35.jpg" alt="Гель 3кг">
+            <h3>"Garnet" универсальные полотенца из микрофибры </h3>
+            <p>Стоимость: 25 000 сум</p>
+            <button onclick="addToCart('Garnet универсальные полотенца из микрофибры ', 25000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-06-29_06-18-03.jpg" alt="Кафолат 1кг">
+            <h3>Уй учун салфеткалар 3шт</h3>
+            <p>Стоимость: 17 000 сум</p>
+            <button onclick="addToCart('Уй учун салфеткалар 3шт', 17000)">Добавить в корзину</button>
+        </div>
+
+   
+        <div class="product">
+            <img src="photo_2026-06-29_06-29-41.jpg" alt="Гель 3кг">
+            <h3>"Garnet"  бумага для выпечки (37см×6метр) </h3>
+            <p>Стоимость: 12 000 сум</p>
+            <button onclick="addToCart('Garnet бумага для выпечки (37см×6метр) ', 12000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-03_14-59-43.jpg" alt="Кафолат 700гр">
+            <h3>Тряпка для пола перфорированный</h3>
+            <p>Стоимость: 10 000 сум</p>
+            <button onclick="addToCart('Тряпка для пола перфорированный', 10000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-03_15-40-48.jpg" alt="Quloqchin">
+            <h3>"Garet"  тряпка для пола</h3>
+            <p>Стоимость: 29 000 сум</p>
+            <button onclick="addToCart('Garet  тряпка для пола ', 29000)">Добавить в корзину</button>
+        </div>
+
+
+        <div class="product">
+            <img src="photo_2026-07-03_18-44-34.jpg" alt="Кафолат 700гр">
+            <h3>Микрофибра 701(40*60) цветной</h3>
+            <p>Стоимость: 19 000 сум</p>
+            <button onclick="addToCart('Микрофибра 701(40*60) цветной', 19000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-03_18-57-20.jpg" alt="Quloqchin">
+            <h3>Микрофибра 702 (50*60) серый</h3>
+            <p>Стоимость: 21 000 сум</p>
+            <button onclick="addToCart('Микрофибра 702 (50*60) серый', 21000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-03_18-58-26.jpg" alt="Гель 3кг">
+            <h3>Кийимларнинг чанги ва хайвон юнгидан тозалаш учун ёпишқоқ қоғозли ролик </h3>
+            <p>Стоимость: 15 000 сум</p>
+            <button onclick="addToCart('Кийимларнинг чанги ва хайвон юнгидан тозалаш учун ёпишқоқ қоғозли ролик ', 15000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-03_18-59-26.jpg" alt="Кафолат 1кг">
+            <h3>Кийимларнинг чанги ва хайвон юнгидан тозалаш учун ёпишқоқ қоғозли ролик </h3>
+            <p>Стоимость: 18.000  сум</p>
+            <button onclick="addToCart('Кийимларнинг чанги ва хайвон юнгидан тозалаш учун ёпишқоқ қоғозли ролик ', 18000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-05_09-46-26.jpg" alt="Кафолат 700гр">
+            <h3>"Garnet" (дельфин) 35×50см</h3>
+            <p>Стоимость: 11 000 сум</p>
+            <button onclick="addToCart('Garnet (дельфин) 35×50см', 11000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-05_09-46-52.jpg" alt="Quloqchin">
+            <h3>Большой (дельфин) 75×50см</h3>
+            <p>Стоимость: 19 000 сум</p>
+            <button onclick="addToCart('Большой (дельфин) 75×50см', 19000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-05_09-54-41.jpg" alt="Гель 3кг">
+            <h3>Фольга для газ плиты </h3>
+            <p>Стоимость: 4 900 сум</p>
+            <button onclick="addToCart('Фольга для газ плиты ', 4900)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home3">
+        <i><h1>Max</h1></i>
+    </section>
+
+    <div class="main-content">
+        <div class="products-container">
+            <div class="product">
+                <img src="photo_2026-07-05_18-00-49.jpg" alt="Гель 3кг">
+                <h3>Max банный мыло 150гр.</h3>
+                <p>Стоимость: 6 500 сум</p>
+                <button onclick="addToCart('Max банный мыло 150гр.', 6500)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-07-05_18-01-10.jpg" alt="Кафолат 1кг">
+                <h3>Жидкий автомат </h3>
+                <p>Стоимость: 33 000 сум</p>
+                <button onclick="addToCart('Жидкий автомат', 33000)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-07-05_18-01-40.jpg" alt="Кафолат 700гр">
+                <h3>МАХ отбеливатель 1л. </h3>
+                <p>Стоимость: 8 000 сум</p>
+                <button onclick="addToCart('МАХ отбеливатель 1л. ', 8000)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-07-05_18-01-53.jpg" alt="Quloqchin">
+                <h3>Max Maya 3л. Жидкий хоз мыло</h3>
+                <p>Стоимость: 18 000 сум</p>
+                <button onclick="addToCart('Max Maya 3л. Жидкий хоз мыло', 18000)">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="photo_2026-07-27_11-41-18.jpg" alt="Quloqchin">
+                <h3>"Maxi & Max" Влажный салфетка мини 1крб × 36 шт</h3>
+                <p>Стоимость: 1 400 сум</p>
+                <button onclick="addToCart('Maxi & Max Влажный салфетка мини 1крб × 36 шт', 1400)">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="home4">
+       <i><h1>Guard</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-07-05_18-11-11.jpg" alt="Гель 3кг">
+            <h3>"GUARD"  клеевая ловушка</h3>
+            <p>Стоимость: 3 000 сум</p>
+            <button onclick="addToCart('GUARD  клеевая ловушка', 3000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-05_18-11-46.jpg" alt="Кафолат 1кг">
+            <h3>"GUARD"  клеевая ловушка против насекомах</h3>
+            <p>Стоимость: 2 600 сум</p>
+            <button onclick="addToCart('GUARD  клеевая ловушка против насекомах', 2600)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home5">
+       <i><h1>Nalan</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-07-19_19-31-35.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло "Nalan" 300гр. зелоний</h3>
+            <p>Стоимость: 6 000 сум</p>
+            <button onclick="addToCart('Жидкий мыло Nalan 300гр. зелоний', 6000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-19_19-31-59.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло "Nalan" 300гр. жолты</h3>
+            <p>Стоимость: 6 000 сум</p>
+            <button onclick="addToCart('Жидкий мыло Nalan 300гр. жолты', 6000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-19_19-32-12.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло "Nalan" 300гр. красны</h3>
+            <p>Стоимость: 6 000 сум</p>
+            <button onclick="addToCart('Жидкий мыло Nalan 300гр. красны', 6000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-19_19-32-25.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло "Nalan" 300гр. синий</h3>
+            <p>Стоимость: 6 000 сум</p>
+            <button onclick="addToCart('Жидкий мыло Nalan 300гр. синий', 6000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-19_19-32-40.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло "Nalan" 300гр. оранжвий</h3>
+            <p>Стоимость: 6 000 сум</p>
+            <button onclick="addToCart('Жидкий мыло Nalan 300гр. оранжвий', 6000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-19_19-32-54.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло "Nalan" 300гр. феолетовий</h3>
+            <p>Стоимость: 6 000 сум</p>
+            <button onclick="addToCart('Жидкий мыло Nalan 300гр. феолетовий', 6000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home6">
+       <i> <h1>Fruktashka</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-07-10_11-43-09.jpg" alt="Гель 3кг">
+            <h3>"Фруктоша" шампунь без слёз 300гр синий</h3>
+            <p>Стоимость: 8 000 сум</p>
+            <button onclick="addToCart('Фруктоша шампунь без слёз 300гр синий', 8000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-10_11-43-26.jpg" alt="Гель 3кг">
+            <h3>"Фруктоша" шампунь без слёз 300гр розовий</h3>
+            <p>Стоимость: 8 000 сум</p>
+            <button onclick="addToCart('Фруктоша шампунь без слёз 300гр розовий', 8000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home7">
+       <i><h1>Bio Master</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-07-12_08-29-17.jpg" alt="Гель 3кг">
+            <h3>"Bio Master" жидкий автомат гель концентрат 2л.</h3>
+            <p>Стоимость: 46 000 сум</p>
+            <button onclick="addToCart('Bio Master жидкий автомат гель концентрат 2л.', 46000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_08-32-45.jpg" alt="Гель 3кг">
+            <h3>Bio Master кислородный очиститель 300 гр.</h3>
+            <p>Стоимость: 25 000 сум</p>
+            <button onclick="addToCart('Bio Master кислородный очиститель 300 гр.', 25000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_08-38-56.jpg" alt="Гель 3кг">
+            <h3>Bio Master кислородный очиститель 300 гр.</h3>
+            <p>Стоимость: 25 000 сум</p>
+            <button onclick="addToCart('Bio Master кислородный очиститель 300 гр.', 25000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home8">
+        <i><h1>Air Bliss</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-07-12_14-10-10.jpg" alt="Гель 3кг">
+            <h3>Освижитель воздуха AIR BLISS 300гр красны</h3>
+            <p>Стоимость: 26 500 сум</p>
+            <button onclick="addToCart('Освижитель воздуха AIR BLISS 300гр красны', 26500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_14-10-35.jpg" alt="Гель 3кг">
+            <h3>Освижитель воздуха AIR BLISS 300гр синий</h3>
+            <p>Стоимость: 26 500 сум</p>
+            <button onclick="addToCart('Освижитель воздуха AIR BLISS 300гр синий', 26500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_14-41-09.jpg" alt="Гель 3кг">
+            <h3>Освижитель воздуха AIR BLISS 300гр фиолетови</h3>
+            <p>Стоимость: 26 500 сум</p>
+            <button onclick="addToCart('Освижитель воздуха AIR BLISS 300гр фиолетови', 26500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_14-41-42.jpg" alt="Гель 3кг">
+            <h3>Освижитель воздуха AIR BLISS 300гр зелоний</h3>
+            <p>Стоимость: 26 500 сум</p>
+            <button onclick="addToCart('Освижитель воздуха AIR BLISS 300гр зелоний', 26500)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home9">
+        <i><h1>Lemon Moon</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-07-12_15-09-16.jpg" alt="Гель 3кг">
+            <h3>Губки для посуды 3шт.</h3>
+            <p>Стоимость: 9 000 сум</p>
+            <button onclick="addToCart('Губки для посуды 3шт.', 9000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_15-09-37.jpg" alt="Гель 3кг">
+            <h3>Губки для посуды 12шт. (104)</h3>
+            <p>Стоимость: 18 900 сум</p>
+            <button onclick="addToCart('Губки для посуды 12шт. (104)', 18900)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_15-09-55.jpg" alt="Гель 3кг">
+            <h3>Губки для посуды 5шт. (114)</h3>
+            <p>Стоимость: 11 000 сум</p>
+            <button onclick="addToCart('Губки для посуды 5шт. (114)', 11000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_15-10-34.jpg" alt="Гель 3кг">
+            <h3>Губка для тела фреза трёхслойная</h3>
+            <p>Стоимость: 12 000 сум</p>
+            <button onclick="addToCart('Губка для тела фреза трёхслойная', 12000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_15-11-05.jpg" alt="Гель 3кг">
+            <h3>Lemon Moon губки для посуды</h3>
+            <p>Стоимость: 12 000 сум</p>
+            <button onclick="addToCart('Lemon Moon губки для посуды', 12000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home10">
+        <i><h1>Silk</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="image_2026-08-22_09-32-32.jpg" alt="Гель 3кг">
+            <h3>"Silk"  атир совун 100гр. чорний</h3>
+            <p>Стоимость: 5 100 сум</p>
+            <button onclick="addToCart('Silk  атир совун 100гр чорний.', 5100)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_09-32-44.jpg" alt="Гель 3кг">
+            <h3>"Silk"  атир совун 100гр. белий</h3>
+            <p>Стоимость: 5 100 сум</p>
+            <button onclick="addToCart('Silk  атир совун 100гр белий.', 5100)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-04-16.jpg" alt="Гель 3кг">
+            <h3>"Silk"  атир совун 150гр оранжвий.</h3>
+            <p>Стоимость: 6 900 сум</p>
+            <button onclick="addToCart('Silk  атир совун 150гр оранжвий.', 6900)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-04-26.jpg" alt="Гель 3кг">
+            <h3>"Silk"  атир совун 150гр. синий</h3>
+            <p>Стоимость: 6 900 сум</p>
+            <button onclick="addToCart('Silk  атир совун 150гр синий.', 6900)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-06-06.jpg" alt="Гель 3кг">
+            <h3>"Silk"  атир совун 150гр зелоний.</h3>
+            <p>Стоимость: 6 900 сум</p>
+            <button onclick="addToCart('Silk  атир совун 150гр зелоний.', 6900)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home12">
+        <i><h1>PeGaS</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-07-12_17-46-45.jpg" alt="Гель 3кг">
+            <h3>Антижир PeGaS 500гр.</h3>
+            <p>Стоимость: 13 500 сум</p>
+            <button onclick="addToCart('Антижир PeGaS 500гр.', 13500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_17-47-28.jpg" alt="Кафолат 1кг">
+            <h3>Моющее срецтво для пола 1Л</h3>
+            <p>Стоимость: 15 000 сум</p>
+            <button onclick="addToCart('Моющее срецтво для пола 1Л', 15000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_17-48-39.jpg" alt="Кафолат 700гр">
+            <h3>Жидкое мыло 1л. </h3>
+            <p>Стоимость: 15 000 сум</p>
+            <button onclick="addToCart('Жидкое мыло 1л. ', 15000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_17-48-52.jpg" alt="Quloqchin">
+            <h3>Чистый казан</h3>
+            <p>Стоимость: 13 500 сум</p>
+            <button onclick="addToCart('Чистый казан', 13500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-07-21.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло 400 гр розовий .</h3>
+            <p>Стоимость: 6 500 сум</p>
+            <button onclick="addToCart('Жидкий мыло 400 гр розовий.', 6500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-07-45.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло 400 гр синий.</h3>
+            <p>Стоимость: 6 500 сум</p>
+            <button onclick="addToCart('Жидкий мыло 400 гр синий.', 6500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-11-46.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло 400 гр зелоний.</h3>
+            <p>Стоимость: 6 500 сум</p>
+            <button onclick="addToCart('Жидкий мыло 400 гр зелоний.', 6500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-14-36.jpg" alt="Гель 3кг">
+            <h3>Жидкий мыло 400 гр феолетовий.</h3>
+            <p>Стоимость: 6 500 сум</p>
+            <button onclick="addToCart('Жидкий мыло 400 гр феолетовий.', 6500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_08-57-51.jpg" alt="Гель 3кг">
+            <h3>Чистоль</h3>
+            <p>Стоимость: 6 500 сум</p>
+            <button onclick="addToCart('Чистоль', 6500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_08-58-14.jpg" alt="Гель 3кг">
+            <h3>Жидкий порошок</h3>
+            <p>Стоимость: 36 000 сум</p>
+            <button onclick="addToCart('Жидкий порошок', 36000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home13">
+        <i><h1>Briler</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-07-12_17-59-18.jpg" alt="Гель 3кг">
+            <h3>Губка абразивный.</h3>
+            <p>Стоимость: 5000 сум</p>
+            <button onclick="addToCart('Губка абразивный.', 5000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-07-42.jpg" alt="Кафолат 1кг">
+            <h3>Салфетка из микрофибры</h3>
+            <p>Стоимость: 7 000 сум</p>
+            <button onclick="addToCart('Салфетка из микрофибры', 7000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-08-11.jpg" alt="Кафолат 700гр">
+            <h3>Губка металлическим покрытием</h3>
+            <p>Стоимость: 3 700 сум</p>
+            <button onclick="addToCart('Губка металлическим покрытием', 3700)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-08-40.jpg" alt="Quloqchin">
+            <h3>Губка с эффектом щетки</h3>
+            <p>Стоимость: 2 700 сум</p>
+            <button onclick="addToCart('Губка с эффектом щетки', 2700)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-08-57.jpg" alt="Гель 3кг">
+            <h3>Губка мочалка</h3>
+            <p>Стоимость: 2 000 сум</p>
+            <button onclick="addToCart('Губка мочалка', 2000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-09-16.jpg" alt="Гель 3кг">
+            <h3>Губка меломиновая</h3>
+            <p>Стоимость: 9 000 сум</p>
+            <button onclick="addToCart('Губка меломиновая', 9000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-09-46.jpg" alt="Гель 3кг">
+            <h3>Губка с абразивным покрытием 10шт </h3>
+            <p>Стоимость: 6 600 сум</p>
+            <button onclick="addToCart('Губка с абразивным покрытием  10шт', 6600)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-10-13.jpg" alt="Гель 3кг">
+            <h3>Губка с абразивным покрытием 5шт</h3>
+            <p>Стоимость: 5 000 сум</p>
+            <button onclick="addToCart('Губка с абразивным покрытием 5шт', 5000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-15-14.jpg" alt="Гель 3кг">
+            <h3>Тряпка для пола</h3>
+            <p>Стоимость: 3 500 сум</p>
+            <button onclick="addToCart('Тряпка для пола', 3500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-15-38.jpg" alt="Гель 3кг">
+            <h3>Губка металличесеая</h3>
+            <p>Стоимость: 3 000 сум</p>
+            <button onclick="addToCart('Губка металличесеая', 3000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-15-51.jpg" alt="Гель 3кг">
+            <h3>Губка металлическая спираль</h3>
+            <p>Стоимость: 2 100 сум</p>
+            <button onclick="addToCart('Губка металлическая спираль', 2100)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-16-15.jpg" alt="Гель 3кг">
+            <h3>Салфетка вискозная</h3>
+            <p>Стоимость: 4 800 сум</p>
+            <button onclick="addToCart('Салфетка вискозная', 4800)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-25_07-38-33.jpg" alt="Гель 3кг">
+            <h3>Унверсальные салфетки в рулоне</h3>
+            <p>Стоимость: 33 800 сум</p>
+            <button onclick="addToCart('Унверсальные салфетки в рулоне', 33800)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home14">
+        <i><h1>Brick</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="photo_2026-07-13_11-37-57.jpg" alt="Гель 3кг">
+            <h3>"Brick" подвеска для унитаза 1 шт</h3>
+            <p>Стоимость: 15 000 сум</p>
+            <button onclick="addToCart('Brik подвеска для унитаза 1 шт', 15000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_11-38-15.jpg" alt="Кафолат 1кг">
+            <h3>"Brick"  подвеска для унитаза 2шт</h3>
+            <p>Стоимость: 21 000 сум</p>
+            <button onclick="addToCart('Brik подвеска для унитаза 2шт', 21000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-13_21-51-56.jpg" alt="Кафолат 700гр">
+            <h3>"Brick" подвеска для унитаза 3 шт</h3>
+            <p>Стоимость: 28 000 сум</p>
+            <button onclick="addToCart('Brik подвеска для унитаза 3 шт', 28000)">Добавить в корзину</button>
+        </div>
+ 
+        <div class="product">
+            <img src="photo_2026-07-12_16-31-16.jpg" alt="Гель 3кг">
+            <h3>Таблетка для сливного бачка 4 шт</h3>
+            <p>Стоимость: 12 000 сум</p>
+            <button onclick="addToCart('Таблетка для сливного бачка 4шт', 12000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-12_16-31-41.jpg" alt="Гель 3кг">
+            <h3>Таблетка для сливного бачка 6 шт</h3>
+            <p>Стоимость: 15 000 сум</p>
+            <button onclick="addToCart('Таблетка для сливного бачка 6шт', 15000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home15">
+        <i><h1>Color</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="image_2026-08-22_14-19-56.jpg" alt="Гель 3кг">
+            <h3>Массажная мочалка (корея) синий</h3>
+            <p>Стоимость: 20 000 сум</p>
+            <button onclick="addToCart('Массажная мочалка (корея) синий', 20000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-20-08.jpg" alt="Гель 3кг">
+            <h3>Массажная мочалка (корея) оранжвий</h3>
+            <p>Стоимость: 20 000 сум</p>
+            <button onclick="addToCart('Массажная мочалка (корея) оранжвий', 20000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-20-18.jpg" alt="Гель 3кг">
+            <h3>Массажная мочалка (корея) феолетовий</h3>
+            <p>Стоимость: 20 000 сум</p>
+            <button onclick="addToCart('Массажная мочалка (корея) феолетовий', 20000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-20-29.jpg" alt="Гель 3кг">
+            <h3>Массажная мочалка (корея) красны</h3>
+            <p>Стоимость: 20 000 сум</p>
+            <button onclick="addToCart('Массажная мочалка (корея) красны', 20000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-22_14-20-44.jpg" alt="Гель 3кг">
+            <h3>Массажная мочалка (корея) </h3>
+            <p>Стоимость: 20 000 сум</p>
+            <button onclick="addToCart('Массажная мочалка (корея) ', 20000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home16">
+        <i><h1>Velar</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="image_2026-08-25_14-19-49.jpg" alt="Гель 3кг">
+            <h3>Капсула для стирки "Velar" 70 шт</h3>
+            <p>Стоимость: 130 000 сум</p>
+            <button onclick="addToCart('Капсула для стирки Velar 70 шт', 130000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home17">
+        <i><h1>Бумажные салфетки</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="image_2026-08-23_13-07-31.jpg" alt="Гель 3кг">
+            <h3>Бумажные полотенца целлюлоза в упаковке 24 шт.</h3>
+            <p>Стоимость: 3 500 сум</p>
+            <button onclick="addToCart('Бумажные полотенца целлюлоза в упаковке 24 шт.', 3500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-23_13-06-39.jpg" alt="Гель 3кг">
+            <h3>Туалетная бумага целлюлоза в упаковке 48 шт.</h3>
+            <p>Стоимость: 2 000 сум</p>
+            <button onclick="addToCart('Туалетная бумага целлюлоза в упаковке 48 шт.', 2000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home18">
+        <i><h1>Стрейч и фалга</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="image_2026-08-23_13-13-49.jpg" alt="Гель 3кг">
+            <h3>Стрейч плёнка</h3>
+            <p>Стоимость: 18 000 сум</p>
+            <button onclick="addToCart('Стрейч плёнка', 18000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-06-29_06-23-01.jpg" alt="Кафолат 700гр">
+            <h3>"Garnet" фольга алюминивая 29см×7.5метр</h3>
+            <p>Стоимость: 15 000 сум</p>
+            <button onclick="addToCart('Garnet фольга алюминивая (29см×7.5метр)', 15000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-06-29_06-23-01.jpg" alt="Quloqchin">
+            <h3>"Garnet" фольга алюминивая 45см×7.5метр</h3>
+            <p>Стоимость: 19 000 сум</p>
+            <button onclick="addToCart('Garnet фольга алюминивая (45см×7.5метр)', 19000)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home19">
+        <i><h1>Перчатки</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="image_2026-08-23_13-28-20.jpg" alt="Гель 3кг">
+            <h3>Перчатка с начосом</h3>
+            <p>Стоимость: 10 500 сум</p>
+            <button onclick="addToCart('Перчатка с начосом', 10500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-03_18-41-24.jpg" alt="Гель 3кг">
+            <h3>Перчатка малина</h3>
+            <p>Стоимость: 8 000 сум</p>
+            <button onclick="addToCart('Перчатка малина', 8000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-03_18-43-39.jpg" alt="Кафолат 1кг">
+            <h3>Уй учун салфеткалар 3шт</h3>
+            <p>Стоимость: 8 000 сум</p>
+            <button onclick="addToCart('Уй учун салфеткалар 3шт', 8000)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="photo_2026-07-03_08-16-40.jpg" alt="Кафолат 1кг">
+            <h3>Перчаки с начосом (длинные)</h3>
+            <p>Стоимость: 10.500  сум</p>
+            <button onclick="addToCart('Перчаки с начосом (длинные)', 10500)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <section id="home20">
+        <i><h1>Влажный салфетки</h1></i>
+    </section>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="image_2026-08-25_14-33-58.jpg" alt="Гель 3кг">
+            <h3>Влажная салфетка 72шт синий</h3>
+            <p>Стоимость: 6 500 сум</p>
+            <button onclick="addToCart('Влажная салфетка 72шт синий', 6500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-25_14-33-58.jpg" alt="Гель 3кг">
+            <h3>Влажная салфетка 120шт синий</h3>
+            <p>Стоимость: 9 500 сум</p>
+            <button onclick="addToCart('Влажная салфетка 120шт синий', 9500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-25_14-34-53.jpg" alt="Гель 3кг">
+            <h3>Влажная салфетка 72шт розовий</h3>
+            <p>Стоимость: 6 500 сум</p>
+            <button onclick="addToCart('Влажная салфетка 72шт розовий', 6500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product">
+            <img src="image_2026-08-25_14-34-53.jpg" alt="Гель 3кг">
+            <h3>Влажная салфетка 120шт розовий</h3>
+            <p>Стоимость: 9 500 сум</p>
+            <button onclick="addToCart('Влажная салфетка 120шт розовий', 9500)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <div id="cart">
+        <h2>🛒 Тележка</h2>
+        <ul id="cartItems"></ul>
+        <h3>Общий: <span id="total">0</span> Сум</h3>
+        <button id="buyBtn" class="buy-btn">Купить</button>
+        <p id="buyMessage" class="buy-message" style="display:none;"></p>
+    </div>
+
+    <footer style="background-color: rgb(4, 4, 61);" class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-icon">🏠</span>
+                    <span class="logo-text">Чистый Дом</span>
+                </div>
+
+                <p class="footer-desc">
+                    «Чистый Дом» is a service that offers high-quality cleaning products designed
+                    to help keep homes and offices clean, fresh, and comfortable.
+                    Our main goal is to provide our customers with effective, convenient, and
+                    easy-to-use products that make everyday cleaning easier and more efficient.
+                    We offer a wide range of products for cleaning homes, offices, and other
+                    spaces in one convenient place. Our products are designed for everyday use,
+                    help achieve excellent cleaning results, and make it easier to maintain
+                    cleanliness for a longer time.
+                </p>
+
+                <div  class="ul123">
+                    <h4 style="margin-top: 40px;">Our Advantages:</h4>
+                    <ul>
+                        <li>🏠 Convenient products for home use</li>
+                        <li>🏢 Products for offices and workplaces</li>
+                        <li>🧴 A wide selection of products for everyday use</li>
+                        <li>💰 Affordable and reasonable prices </li>
+                        <li>⭐ Attention to our customers' needs </li>
+                        <li>📦 A convenient way to choose the right products </li>
+                    </ul>
+                </div>
+
+                    <p class="footer-desc1">
+                        Our goal is to make it easier for every household to maintain cleanliness
+                        and order. With "Чистый Дом," a clean home means a more comfortable life!
+                        We value the trust of our customers and constantly strive to improve the
+                        quality of our products and services.
+                    </p>
+            </div>
+            
+
+            <div style="margin-left: 100px;" class="footer-links">
+                <h4>Брендлар</h4>
+                <ul>
+                    <li><a href="#home1">Kafolat</a></li>
+                    <li><a href="#home2">Garnet</a></li>
+                    <li><a href="#home3">Max</a></li>
+                    <li><a href="#home4">Guard</a></li>
+                    <li><a href="#home5">Nalan</a></li>
+                    <li><a href="#home6">Fruktashka</a></li>
+                    <li><a href="#home7">Bio Master</a></li>
+                    <li><a href="#home8">Air Bliss</a></li>
+                    <li><a href="#home9">Lemon Moon</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links1">
+                <h4>Брендлар</h4>
+                <ul>
+                    <li><a href="#home10">Silk</a></li>
+                    <li><a href="#home12">PegAs</a></li>
+                    <li><a href="#home13">Briler</a></li>
+                    <li><a href="#home14">Brick</a></li>
+                    <li><a href="#home15">Color</a></li>
+                    <li><a href="#home16">Velar</a></li>
+                    <li><a href="#home17">Бумажные салфетки</a></li>
+                    <li><a href="#home18">Стрейч и фалга</a></li>
+                    <li><a href="#home19">Перчатки</a></li>
+                    <li><a href="#home20">Влажный салфетки</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Биз билан боғланиш</h4>
+                <p>📞 +998 (97) 709-37-73</p>
+                <p>📍 Ташкент, Узбекистан</p>
+                <p>✉️  jxodiev@gmail.com</p>
+                <h1 style="color: #060635;">HTML </h1>
+                <img class="QR" src="image_2026-08-22_14-32-04.jpg" alt="">
+                <button class="admin-btn footer-admin-btn admin-trigger" id="adminBtnFooter">Admin</button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Чистый Дом. Барча ҳуқуқлар ҳимояланган.</p> 
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
